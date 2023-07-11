@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 :root {
-  --bg-color: darkslateblue;
+  --bg-color: black;
   --color: white;
 }
 
@@ -10,23 +11,22 @@
 }
 
 body {
-  /* background-color: var(--bg-color); */
-  background: linear-gradient(0deg, black, #1a172d);
+  background: linear-gradient(0deg, var(--bg-color), #212121);
   color: var(--color);
   width: 100vw;
   height: 100vh;
+  font-family: 'Alfa Slab One', cursive;
 }
 
 header {
   position: fixed;
   z-index: 200;
-  background-color: transparent;
   width: 90vw;
   height: 10vh;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  right: 0;
+  right: 2rem;
 }
 
 header nav {
@@ -37,6 +37,25 @@ header nav {
 ul {
   list-style: none;
   display: flex;
+  gap: 3rem;
+}
+
+ul li {
+  color: gold;
+  letter-spacing: 2px;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+a:active {
+  color: inherit;
+}
+
+a:hover {
+  color: gold;
 }
 
 main {
@@ -50,43 +69,36 @@ main {
 
 section {
   height: inherit;
-}
-
-main section:nth-child(1) {
   display: flex;
   justify-content: start;
   align-items: center;
 }
 
-main section:nth-child(1) h1 {
+main section:nth-child(2),
+main section:nth-child(4) {
+  align-items: flex-start;
+}
+
+main section:nth-child(1) h1{
   text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 5px;
+  letter-spacing: 1rem;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-size: 7rem;
+  font-size: 5.5rem;
   display: initial;
-  margin-left: 1rem;
+  margin-left: 2.5rem;
 }
 
-main section:nth-child(2) {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-}
-
-main section:nth-child(2) .about-us {
+.card {
   width: max-content;
-  margin-top: 5rem;
-  border: 1px solid var(--color);
-  border-radius: 2rem 0 2rem 0;
-  padding: 1rem;
+  margin-top: 10rem;
+  padding: .5rem;
+  font-size: 0.8rem;
 }
 
-main section:nth-child(3) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+main section:nth-child(2) .card {
+  border-top: 1px solid var(--color);
+  border-bottom: 1px solid var(--color);
 }
 
 main section:nth-child(3) img {
@@ -94,6 +106,14 @@ main section:nth-child(3) img {
   filter: grayscale(1);
   border-radius: 50%;
   height: 100vh;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+main section:nth-child(4) .card {
+  display: flex;
+  gap: 2rem;
 }
 
 footer {
