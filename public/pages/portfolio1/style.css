@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+:root {
+  --bg-color: black;
+  --color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(0deg, var(--bg-color), #212121);
+  color: var(--color);
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+header {
+  position: fixed;
+  z-index: 200;
+  width: 90vw;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  right: 2rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+ul li {
+  color: gold;
+  letter-spacing: 2px;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+a:active {
+  color: inherit;
+}
+
+a:hover {
+  color: gold;
+}
+
+main {
+  position: relative;
+  z-index: 100;
+  width: inherit;
+  height: inherit;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+section {
+  height: inherit;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+main section:nth-child(2),
+main section:nth-child(4) {
+  align-items: flex-start;
+}
+
+main section:nth-child(1) h1{
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 5.5rem;
+  display: initial;
+  margin-left: 2.5rem;
+}
+
+.card {
+  width: max-content;
+  margin-top: 10rem;
+  padding: .5rem;
+  font-size: 0.8rem;
+}
+
+main section:nth-child(2) .card {
+  border-top: 1px solid var(--color);
+  border-bottom: 1px solid var(--color);
+}
+
+main section:nth-child(3) img {
+  position: absolute;
+  filter: grayscale(1);
+  border-radius: 50%;
+  height: 100vh;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+main section:nth-child(4) .card {
+  display: flex;
+  gap: 2rem;
+}
+
+footer {
+  position: fixed;
+  z-index: 10;
+  width: inherit;
+  bottom: -50px;
+}
+
+footer p {
+  font-size: 20rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color);
+  opacity: 0.2;
+}
